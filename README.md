@@ -48,6 +48,10 @@ Channels (WhatsApp, Telegram, Slack, ...)
    Persistence (Sessions, Memory, Config, Skills)
 ```
 
+## Source Code
+
+The OpenClaw source code is available at [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw).
+
 ## License
 
 These design documents describe the architecture of the OpenClaw project.
