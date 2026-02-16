@@ -23,6 +23,14 @@ OpenClaw connects one or more AI agents to multiple messaging surfaces (WhatsApp
 | 12 | [Sandbox & Security](12-sandbox-and-security.md) | Docker-based execution isolation and configurable access levels |
 | 13 | [File Reference](13-file-reference.md) | Complete file reference index across the codebase |
 
+## Reference Catalogs
+
+| Catalog | Contents |
+|---------|----------|
+| [prompts/](prompts/) | 20 system prompt templates and sections — main prompt, safety, tooling, skills, memory, messaging, sub-agent prompts, compaction, and more |
+| [tools/](tools/) | 31 built-in tools across 7 groups — file system, runtime, web, UI, sessions, automation, and messaging — plus policy and mutation docs |
+| [skills/](skills/) | 60 skills — 51 bundled (1Password, Slack, GitHub, Spotify, Apple Notes, ...), 5 extension (Feishu), and 4 agent workflows (PR review/prepare/merge, Mintlify) |
+
 ## Key Design Principles
 
 - **Single gateway, many channels** — One daemon process owns all provider connections
