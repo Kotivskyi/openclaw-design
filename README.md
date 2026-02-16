@@ -4,7 +4,11 @@ Technical design documents for **OpenClaw** — an open-source, multi-channel AI
 
 OpenClaw connects one or more AI agents to multiple messaging surfaces (WhatsApp, Telegram, Slack, Discord, Signal, iMessage, Web Chat) through a single long-lived daemon process.
 
-## Documents
+## High-Level Design
+
+- [OpenClaw Technical Design](OpenClaw_Technical_Design.md) — Comprehensive end-to-end technical design covering the agentic workflow, features, and use cases (19 sections)
+
+## Design Documents
 
 | # | Document | Description |
 |---|----------|-------------|
