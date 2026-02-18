@@ -33,20 +33,20 @@ Bindings are **deterministic** and **most-specific wins**:
 ```mermaid
 flowchart TD
     MSG[Inbound Message] --> P{Peer match?<br/>exact DM/group/channel ID}
-    P -->|Yes| R1[Route to bound agent]
+    P -->|Yes| ROUTE[Route to bound agent]
     P -->|No| PP{Parent peer match?<br/>thread inheritance}
-    PP -->|Yes| R2[Route to bound agent]
+    PP -->|Yes| ROUTE
     PP -->|No| GR{Guild ID + Roles?<br/>Discord role routing}
-    GR -->|Yes| R3[Route to bound agent]
+    GR -->|Yes| ROUTE
     GR -->|No| G{Guild ID?<br/>Discord}
-    G -->|Yes| R4[Route to bound agent]
+    G -->|Yes| ROUTE
     G -->|No| T{Team ID?<br/>Slack}
-    T -->|Yes| R5[Route to bound agent]
+    T -->|Yes| ROUTE
     T -->|No| A{Account ID match?}
-    A -->|Yes| R6[Route to bound agent]
-    A -->|No| CH{Channel-level match?<br/>accountId: "*"}
-    CH -->|Yes| R7[Route to bound agent]
-    CH -->|No| DEF[Fallback to default agent<br/>agents.list[].default or first entry]
+    A -->|Yes| ROUTE
+    A -->|No| CH{Channel-level match?<br/>accountId: &ast;}
+    CH -->|Yes| ROUTE
+    CH -->|No| DEF[Fallback to default agent<br/>agents.list·default or first entry]
 ```
 
 ## Configuration Examples
